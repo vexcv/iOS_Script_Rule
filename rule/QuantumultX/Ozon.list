@@ -1,0 +1,7 @@
+# NAME: Ozon
+# AUTHOR: Elvis9931
+# REPO: https://github.com/Elvis9931/iOS_Script_Rule
+# UPDATED: 2024-06-11
+HOST-SUFFIX,ozon.com,Ozon
+HOST-SUFFIX,ozon.ru,Ozon
+HOST-KEYWORD,ozon,Ozon
