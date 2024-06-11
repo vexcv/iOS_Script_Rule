@@ -1,0 +1,6 @@
+# NAME: Lazada
+# AUTHOR: Elvis9931
+# REPO: https://github.com/Elvis9931/iOS_Script_Rule
+# UPDATED: 2024-06-11
+HOST-SUFFIX,lazada.com,Lazada
+HOST-KEYWORD,lazada,Lazada
