@@ -16,7 +16,7 @@
 #
 # 图标库 → Qure：https://github.com/Koolson/Qure/tree/master/IconSet 或 OrzMini：https://github.com/Orz-3/mini
 #
-# 简洁配置-更新时间[2024-06-12]
+# 简洁配置-更新时间[2024-06-22]
 
 [general]
 excluded_routes=192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8
