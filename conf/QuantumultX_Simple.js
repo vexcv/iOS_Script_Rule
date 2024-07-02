@@ -96,11 +96,11 @@ vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5
 
 
 [server_remote]
-https://host.api-baobaog.rest/api/v1/client/subscribe?token=9b5a8eb04fe48498874f6bc18b048c0c, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=true
+https://wow.dogss-host.store/api/v1/client/subscribe?token=7342446d368b6a85bd5c81d6c8918b82, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=true
 https://dy.tagsub.net/api/v1/client/subscribe?token=3398917d26704d263b9ad451e944ce61, tag=TAGInternet, update-interval=43200, opt-parser=false, enabled=true
-https://tagcdnsub.work/api/v1/client/subscribe?token=8345870ae81dd38ccbccfb92b3e2b1bc, tag=TAGInternet, update-interval=43200, opt-parser=false, enabled=false
-https://wow.dogss-host.bond/api/v1/client/subscribe?token=9b5a8eb04fe48498874f6bc18b048c0c, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
-https://wow.dogss-host.store/api/v1/client/subscribe?token=9b5a8eb04fe48498874f6bc18b048c0c, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
+https://tagcdnsub.work/api/v1/client/subscribe?token=3398917d26704d263b9ad451e944ce61, tag=TAGInternet, update-interval=43200, opt-parser=false, enabled=false
+https://wow.dogss-host.bond/api/v1/client/subscribe?token=7342446d368b6a85bd5c81d6c8918b82, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
+https://host.api-baobaog.rest/api/v1/client/subscribe?token=7342446d368b6a85bd5c81d6c8918b82, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
 # 节点远程订阅
 
 
