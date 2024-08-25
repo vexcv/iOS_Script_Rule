@@ -16,7 +16,7 @@
 #
 # 图标库 → Qure：https://github.com/Koolson/Qure/tree/master/IconSet 或 OrzMini：https://github.com/Orz-3/mini
 #
-# 超简洁配置-更新时间[2024-06-12]
+# 超简洁配置-更新时间[2024-08-26]
 
 [general]
 excluded_routes=192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8
@@ -81,7 +81,6 @@ vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5
 
 [server_remote]
 https://host.api-baobaog.rest/api/v1/client/subscribe?token=9b5a8eb04fe48498874f6bc18b048c0c, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=true
-https://tagcdnsub.work/api/v1/client/subscribe?token=8345870ae81dd38ccbccfb92b3e2b1bc, tag=TAGInternet, update-interval=43200, opt-parser=false, enabled=true
 https://wow.dogss-host.bond/api/v1/client/subscribe?token=9b5a8eb04fe48498874f6bc18b048c0c, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
 https://wow.dogss-host.store/api/v1/client/subscribe?token=9b5a8eb04fe48498874f6bc18b048c0c, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
 # 节点远程订阅
