@@ -100,7 +100,8 @@ static=Steam, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Q
 
 [server_local]
 # 本地服务器部分, 自行添加即可
-vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5ad-2beacfc96ee6, obfs=wss, obfs-uri=/go, tls-verification=false, fast-open=false, udp-relay=false, aead=true, tag=🇺🇸USA-SantaClara_Tencent_VMess_WebSocket
+vless=elvisss.serv00.net:16866, method=none, password=43c91fff-2efa-45d0-91ec-b5d557d959cc, obfs=ws, obfs-host=elvisss.serv00.net, obfs-uri=/, fast-open=false, udp-relay=false, tag=🇵🇱 serv00-vless
+vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5ad-2beacfc96ee6, obfs=wss, obfs-uri=/go, tls-verification=false, fast-open=false, udp-relay=false, aead=true, tag=🇺🇸 USA-SantaClara_Tencent_VMess_WebSocket
 
 
 [server_remote]
