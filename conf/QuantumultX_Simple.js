@@ -78,22 +78,16 @@ static=Google, proxy, direct, 🇭🇰 Hong Kong丨01, 🇭🇰 Hong Kong丨02, 
 static=Microsoft, proxy, direct, 🇭🇰 Hong Kong丨01, 🇭🇰 Hong Kong丨02, 🇭🇰 Hong Kong丨03, 🇭🇰 Hong Kong丨04, 🇭🇰 Hong Kong丨05, 🇭🇰 Hong Kong丨06, 🇭🇰 Hong Kong丨07, 🇭🇰 Hong Kong丨08, 🇭🇰 Hong Kong丨09, 🇭🇰 Hong Kong丨10, 🇭🇰 Hong Kong丨11, 🇭🇰 Hong Kong丨12, 🇭🇰 Hong Kong丨13, 🇭🇰 Hong Kong丨14, 🇭🇰 Hong Kong丨15, 🇨🇳 Taiwan丨01, 🇨🇳 Taiwan丨02, 🇨🇳 Taiwan丨03, 🇨🇳 Taiwan丨04, 🇨🇳 Taiwan丨05, 🇨🇳 Taiwan丨06, 🇨🇳 Taiwan丨07, 🇨🇳 Taiwan丨08, 🇨🇳 Taiwan丨09, 🇨🇳 Taiwan丨10, 🇸🇬 Singapore丨01, 🇸🇬 Singapore丨02, 🇸🇬 Singapore丨03, 🇸🇬 Singapore丨04, 🇸🇬 Singapore丨05, 🇸🇬 Singapore丨06, 🇸🇬 Singapore丨07, 🇸🇬 Singapore丨08, 🇸🇬 Singapore丨09, 🇸🇬 Singapore丨10, 🇯🇵 Japan丨01, 🇯🇵 Japan丨02, 🇯🇵 Japan丨03, 🇯🇵 Japan丨04, 🇯🇵 Japan丨05, 🇯🇵 Japan丨06, 🇯🇵 Japan丨07, 🇯🇵 Japan丨08, 🇯🇵 Japan丨09, 🇯🇵 Japan丨10, 🇺🇸 United States丨01, 🇺🇸 United States丨02, 🇺🇸 United States丨03, 🇺🇸 United States丨04, 🇺🇸 United States丨05, 🇺🇸 United States丨06, 🇺🇸 United States丨07, 🇺🇸 United States丨08, 🇺🇸 United States丨09, 🇺🇸 United States丨10, 🇰🇷 South Korea丨01, 🇰🇷 South Korea丨02, 🇨🇦 Canada丨01, 🇨🇦 Canada丨02, 🇬🇧 Great Britain丨01, 🇬🇧 Great Britain丨02, 🇹🇷 Turkey丨01, 🇮🇳 India丨01, 🇳🇱 Netherlands丨01, 🇫🇷 France | 01, 🇩🇪 Germany | 01, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
 static=Steam, proxy, direct, 🇭🇰 Hong Kong丨01, 🇭🇰 Hong Kong丨02, 🇭🇰 Hong Kong丨03, 🇭🇰 Hong Kong丨04, 🇭🇰 Hong Kong丨05, 🇭🇰 Hong Kong丨06, 🇭🇰 Hong Kong丨07, 🇭🇰 Hong Kong丨08, 🇭🇰 Hong Kong丨09, 🇭🇰 Hong Kong丨10, 🇭🇰 Hong Kong丨11, 🇭🇰 Hong Kong丨12, 🇭🇰 Hong Kong丨13, 🇭🇰 Hong Kong丨14, 🇭🇰 Hong Kong丨15, 🇨🇳 Taiwan丨01, 🇨🇳 Taiwan丨02, 🇨🇳 Taiwan丨03, 🇨🇳 Taiwan丨04, 🇨🇳 Taiwan丨05, 🇨🇳 Taiwan丨06, 🇨🇳 Taiwan丨07, 🇨🇳 Taiwan丨08, 🇨🇳 Taiwan丨09, 🇨🇳 Taiwan丨10, 🇸🇬 Singapore丨01, 🇸🇬 Singapore丨02, 🇸🇬 Singapore丨03, 🇸🇬 Singapore丨04, 🇸🇬 Singapore丨05, 🇸🇬 Singapore丨06, 🇸🇬 Singapore丨07, 🇸🇬 Singapore丨08, 🇸🇬 Singapore丨09, 🇸🇬 Singapore丨10, 🇯🇵 Japan丨01, 🇯🇵 Japan丨02, 🇯🇵 Japan丨03, 🇯🇵 Japan丨04, 🇯🇵 Japan丨05, 🇯🇵 Japan丨06, 🇯🇵 Japan丨07, 🇯🇵 Japan丨08, 🇯🇵 Japan丨09, 🇯🇵 Japan丨10, 🇺🇸 United States丨01, 🇺🇸 United States丨02, 🇺🇸 United States丨03, 🇺🇸 United States丨04, 🇺🇸 United States丨05, 🇺🇸 United States丨06, 🇺🇸 United States丨07, 🇺🇸 United States丨08, 🇺🇸 United States丨09, 🇺🇸 United States丨10, 🇰🇷 South Korea丨01, 🇰🇷 South Korea丨02, 🇨🇦 Canada丨01, 🇨🇦 Canada丨02, 🇬🇧 Great Britain丨01, 🇬🇧 Great Britain丨02, 🇹🇷 Turkey丨01, 🇮🇳 India丨01, 🇳🇱 Netherlands丨01, 🇫🇷 France | 01, 🇩🇪 Germany | 01, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
 
-
-
 [server_local]
-vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5ad-2beacfc96ee6, obfs=wss, obfs-uri=/go, tls-verification=false, fast-open=false, udp-relay=false, aead=true, tag=🇺🇸USA-SantaClara_Tencent_VMess_WebSocket
 # 本地服务器部分, 自行添加即可
-
-
+vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5ad-2beacfc96ee6, obfs=wss, obfs-uri=/go, tls-verification=false, fast-open=false, udp-relay=false, aead=true, tag=🇺🇸USA-SantaClara_Tencent_VMess_WebSocket
 
 [server_remote]
+# 节点远程订阅
 https://bobo.dogss-host.store/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=true
 https://wow.dogss-host.store/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
 https://wow.dogss-host.bond/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
 https://host.api-baobaog.rest/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
-# 节点远程订阅
-
-
 
 [filter_remote]
 # 远程分流规则策略组
@@ -120,7 +114,6 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Steam/Steam.list, tag=Steam, force-policy=Steam, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Microsoft/Microsoft.list, tag=Microsoft, force-policy=Microsoft, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Google/Google.list, tag=Google, force-policy=Google, update-interval=86400, opt-parser=false, enabled=true
-
 
 [filter_local]
 # 本地分流规则(相同规则下，本地规则将覆盖远程规则，优先生效)
