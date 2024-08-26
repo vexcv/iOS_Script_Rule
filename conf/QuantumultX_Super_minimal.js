@@ -79,28 +79,28 @@ vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5
 
 [server_remote]
 # 节点远程订阅
-https://bobo.dogss-host.store/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=true
-https://wow.dogss-host.store/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
-https://wow.dogss-host.bond/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
-https://host.api-baobaog.rest/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=43200, opt-parser=false, enabled=false
+https://host.api-baobaog.rest/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=true
+https://wow.dogss-host.store/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
+https://wow.dogss-host.bond/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
+https://bobo.dogss-host.store/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
 
 [filter_remote]
 # 远程分流规则策略组
 
 # 社交聊天
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Whatsapp/Whatsapp.list, tag=Whatsapp, force-policy=Whatsapp, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=Telegram, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Twitter/Twitter.list, tag=X, force-policy=X, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Instagram/Instagram.list, tag=Instagram, force-policy=Instagram, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Whatsapp/Whatsapp.list, tag=Whatsapp, force-policy=Whatsapp, update-interval=2592000, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=Telegram, update-interval=2592000, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Twitter/Twitter.list, tag=X, force-policy=X, update-interval=2592000, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Instagram/Instagram.list, tag=Instagram, force-policy=Instagram, update-interval=2592000, opt-parser=false, enabled=true
 # AI工具
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list, tag=OpenAI, force-policy=OpenAI, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list, tag=OpenAI, force-policy=OpenAI, update-interval=2592000, opt-parser=false, enabled=true
 # Payment
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PayPal/PayPal.list, tag=PayPal, force-policy=PayPal, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PayPal/PayPal.list, tag=PayPal, force-policy=PayPal, update-interval=2592000, opt-parser=false, enabled=true
 # 流媒体
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=YouTube, force-policy=YouTube, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix, force-policy=Netflix, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify, force-policy=Spotify, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list, tag=TikTok, force-policy=TikTok, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=YouTube, force-policy=YouTube, update-interval=2592000, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix, force-policy=Netflix, update-interval=2592000, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify, force-policy=Spotify, update-interval=2592000, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list, tag=TikTok, force-policy=TikTok, update-interval=2592000, opt-parser=false, enabled=true
 
 [filter_local]
 # 本地分流规则(相同规则下，本地规则将覆盖远程规则，优先生效)
