@@ -118,7 +118,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 
 [filter_local]
 # 本地分流规则(相同规则下，本地规则将覆盖远程规则，优先生效)
-USER-AGENT,Termius,DIRECT
+HOST-KEYWORD,servV00,DIRECT
 HOST-KEYWORD,czzy,DIRECT
 HOST-KEYWORD,czys,DIRECT
 
