@@ -47,10 +47,8 @@ server = 114.114.114.114
 server = 119.29.29.29
 server = 1.2.4.8
 server = 8.8.8.8
-doq-server = quic://dns.adguard.com
-doq-server = quic://dns.nextdns.io
-doh-server = https://dns.alidns.com/dns-query
-doh-server = https://doh.pub/dns-query
+doq-server = quic://dns.adguard.com, quic://dns.nextdns.io
+doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query
 ;doh-server = https://1.1.1.1/dns-query
 ;doh-server = https://dns.google/dns-query
 # 为特定域名设置解析服务器
