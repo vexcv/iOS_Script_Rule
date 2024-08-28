@@ -41,7 +41,7 @@ geo_location_checker=http://ip-api.com/json/?lang=en-US, https://mirror.ghproxy.
 ;circumvent-ipv6-answer = ::
 ;prefer-doh3
 ;no-system
-;no-ipv6
+no-ipv6
 server = 223.5.5.5
 server = 114.114.114.114
 server = 119.29.29.29
@@ -134,16 +134,10 @@ static=Apple, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Q
 
 [server_local]
 # 本地服务器部分, 自行添加即可
-vless=elvisss.serv00.net:16877, method=none, password=d3560445-1004-47de-9c4b-4ac52237ffd6, obfs=ws, obfs-host=elvisss.serv00.net, obfs-uri=/, fast-open=false, udp-relay=false, tag=🇵🇱 serv00-vless
-vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5ad-2beacfc96ee6, obfs=wss, obfs-uri=/go, tls-verification=false, fast-open=false, udp-relay=false, aead=true, tag=🇺🇸 USA-SantaClara_Tencent_VMess_WebSocket
+vless=serv00.net, method=none, password=d3560445-1004-47de-9c4b-4ac52237ffd6, obfs=ws, obfs-host=elvisss.serv00.net, obfs-uri=/, fast-open=false, udp-relay=false, tag=🇵🇱 serv00-vless
 
 [server_remote]
 # 节点远程订阅
-https://bobo.dogss-host.store/api/v1/client/subscribe?token=0e16880113161eb3b3bd8dc53bca01ad, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=true
-;https://dodo.api-baobaog.rest/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
-;https://wow.dogss-host.store/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
-;https://wow.dogss-host.bond/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
-;https://host.api-baobaog.rest/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
 
 [filter_remote]
 # 远程分流规则策略组
