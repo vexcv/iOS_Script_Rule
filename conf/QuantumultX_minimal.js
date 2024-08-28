@@ -44,7 +44,7 @@ server = 114.114.114.114
 server = 119.29.29.29
 server = 1.2.4.8
 server = 8.8.8.8
-// 为特定域名设置解析服务器
+# 为特定域名设置解析服务器
 server = /*.taobao.com/223.5.5.5
 server = /*.tmall.com/223.5.5.5
 server = /*.alipay.com/223.5.5.5
@@ -66,7 +66,7 @@ server = /*.127.net/119.29.29.29
 server = /*.netease.com/119.29.29.29
 server = /*.mi.com/119.29.29.29
 server = /*.xiaomi.com/119.29.29.29
-// 特定域名的IP地址映射
+# 特定域名的IP地址映射
 address = /www.google.com/172.217.163.110
 address = /www.youtube.com/142.250.72.206
 address = /x.com/104.244.42.129
@@ -75,7 +75,7 @@ address = /www.facebook.com/31.13.71.36
 address = /instagram.com/157.240.229.174
 address = /github.com/140.82.114.4
 address = /mtalk.google.com/108.177.125.188
-// Microsoft
+# Microsoft
 address = /login.microsoftonline.com/40.90.189.182
 address = /outlook.office365.com/52.96.34.98
 address = /graph.microsoft.com/20.190.130.1
@@ -122,10 +122,11 @@ vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5
 
 [server_remote]
 # 节点远程订阅
-https://bobo.dogss-host.store/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=true
-https://wow.dogss-host.store/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
-https://wow.dogss-host.bond/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
-https://host.api-baobaog.rest/api/v1/client/subscribe?token=218146b8165100770c21f66b81493b88, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
+https://dodo.api-baobaog.rest/api/v1/client/subscribe?token=0e16880113161eb3b3bd8dc53bca01ad, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=true
+;https://bobo.dogss-host.store/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
+;https://wow.dogss-host.store/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
+;https://wow.dogss-host.bond/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
+;https://host.api-baobaog.rest/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
 
 [filter_remote]
 # 远程分流规则策略组
