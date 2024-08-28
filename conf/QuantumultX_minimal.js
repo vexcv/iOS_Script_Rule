@@ -135,7 +135,7 @@ static=Apple, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Q
 
 [server_local]
 # 本地服务器部分, 自行添加即可
-vless=serv00.net:22, method=none, password=d3560445-1004-47de-9c4b-4ac52237ffd6, obfs=ws, obfs-host=elvisss.serv00.net, obfs-uri=/, fast-open=false, udp-relay=false, tag=🇵🇱 serv00-vless
+vless=elvisss.serv00.net:16877, method=none, password=d3560445-1004-47de-9c4b-4ac52237ffd6, obfs=ws, obfs-host=elvisss.serv00.net, obfs-uri=/, fast-open=false, udp-relay=false, tag=🇵🇱 serv00-vless
 
 [server_remote]
 # 节点远程订阅
