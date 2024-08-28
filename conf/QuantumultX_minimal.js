@@ -16,7 +16,7 @@
 #
 # 图标库 → Qure：https://github.com/Koolson/Qure/tree/master/IconSet 或 OrzMini：https://github.com/Orz-3/mini
 #
-# 更新时间[2024-08-28]
+# 更新时间[2024-08-29]
 #
 
 [general]
@@ -41,7 +41,7 @@ geo_location_checker=http://ip-api.com/json/?lang=en-US, https://mirror.ghproxy.
 ;circumvent-ipv6-answer = ::
 ;prefer-doh3
 ;no-system
-:no-ipv6
+;no-ipv6
 server = 223.5.5.5
 server = 114.114.114.114
 server = 119.29.29.29
