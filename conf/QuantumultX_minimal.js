@@ -26,7 +26,8 @@ server_check_url =http://cp.cloudflare.com/generate_204
 ;doh_user_agent = QuantumultX/1.0
 server_check_timeout = 5000
 resource_parser_url =https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-profile_img_url =https://www.iconsdb.com/icons/preview/red/apple-xxl.png
+profile_img_url =https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/apple.png
+: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png _2 _3 https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
 dns_exclusion_list = *.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me, *.pingan.com.cn, *.cmbchina.com, *.localnetwork.uop, mfs.ykimg.com*.ttf, *.icbc.com.cn
 geo_location_checker=http://ip-api.com/json/?lang=en-US, https://mirror.ghproxy.com/https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
 
@@ -47,10 +48,10 @@ server = 114.114.114.114
 server = 119.29.29.29
 server = 1.2.4.8
 server = 8.8.8.8
-doq-server = quic://dns.adguard.com, quic://dns.nextdns.io
-doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query
-;doh-server = https://1.1.1.1/dns-query
-;doh-server = https://dns.google/dns-query
+# 如有需要，自行开启DoQ、DoH
+;doq-server = quic://dns.adguard.com, quic://dns.nextdns.io
+;doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query
+;doh-server = https://1.1.1.1/dns-query, https://dns.google/dns-query
 # 为特定域名设置解析服务器
 ;server = /*.taobao.com/223.5.5.5
 ;server = /*.tmall.com/223.5.5.5
