@@ -122,8 +122,8 @@ vmess=vpn.martian.chat:16888, method=aes-128-gcm, password=3f8e45f8-3da2-4dfb-b5
 
 [server_remote]
 # 节点远程订阅
-https://dodo.api-baobaog.rest/api/v1/client/subscribe?token=0e16880113161eb3b3bd8dc53bca01ad, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=true
-;https://bobo.dogss-host.store/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
+https://bobo.dogss-host.store/api/v1/client/subscribe?token=0e16880113161eb3b3bd8dc53bca01ad, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=true
+;https://dodo.api-baobaog.rest/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
 ;https://wow.dogss-host.store/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
 ;https://wow.dogss-host.bond/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
 ;https://host.api-baobaog.rest/api/v1/client/subscribe?token=, tag=SSRDOG, update-interval=172800, opt-parser=false, enabled=false
