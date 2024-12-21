@@ -138,17 +138,6 @@ proxy-groups:
       - Other Regions
       - DIRECT
 
-  - name: Telegram
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png
-    type: select
-    proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
-
   - name: Microsoft
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Microsoft.png
     type: select
@@ -236,9 +225,19 @@ proxy-groups:
       - Other Regions
       - DIRECT
 
-
   - name: Steam
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Steam.png
+    type: select
+    proxies:
+      - Default
+      - AUTO
+      - ALL
+      - SSRDOG
+      - Other Regions
+      - DIRECT
+
+  - name: Telegram
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png
     type: select
     proxies:
       - Default
@@ -342,19 +341,20 @@ proxy-groups:
     include-all: true
 rules:
   - RULE-SET,category-ai-chat-!cn,OpenAI
-  - RULE-SET,telegram,Telegram
+  - RULE-SET,google,Google
+  - RULE-SET,apple,Apple
+  - RULE-SET,microsoft,Microsoft
+  - RULE-SET,payapl,PayPal
   - RULE-SET,youtube,YouTube
   - RULE-SET,netflix,NETFLIX
   - RULE-SET,spotify,Spotify
   - RULE-SET,disney,Disney+
   - RULE-SET,tiktok,TikTok
-  - RULE-SET,steam@cn,Mainland
+  - RULE-SET,bilibili,BiliBili
   - RULE-SET,steam,Steam
-  - RULE-SET,pixiv,Others
-  - RULE-SET,google-cn,Google
-  - RULE-SET,apple-cn,Apple
+  - RULE-SET,telegram,Telegram
   - RULE-SET,microsoft@cn,Mainland
-  - RULE-SET,microsoft,Microsoft
+  - RULE-SET,steam@cn,Mainland
   - GEOIP,LAN,DIRECT,no-resolve
   - GEOIP,CN,Mainland,no-resolve
   - MATCH,Others
@@ -365,12 +365,30 @@ rule-providers:
     behavior: domain
     format: text
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-chat-!cn.list
-  telegram:
+  google:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.list
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.list
+  apple:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.list
+  microsoft:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.list
+  paypal:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/paypal.list
   youtube:
     type: http
     interval: 86400
@@ -401,48 +419,36 @@ rule-providers:
     behavior: domain
     format: text
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.list
-  steam@cn:
+  bilibili:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam@cn.list
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.list
   steam:
     type: http
     interval: 86400
     behavior: domain
     format: text
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.list
-  pixiv:
+  telegram:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/pixiv.list
-  google-cn:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-cn.list
-  apple-cn:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple-cn.list
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.list
   microsoft@cn:
     type: http
     interval: 86400
     behavior: domain
     format: text
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft@cn.list
-  microsoft:
+  steam@cn:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.list
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam@cn.list
 script:
   shortcuts:
     quic: network == 'udp' and dst_port == 443
