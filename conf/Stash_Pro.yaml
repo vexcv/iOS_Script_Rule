@@ -166,7 +166,6 @@ proxy-groups:
       - 'Default'
       - 'AUTO'
       - 'ALL'
-      - 'SSRDOG'
       - 'Other Regions'
       - 'DIRECT'
 
