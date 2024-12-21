@@ -56,41 +56,7 @@ proxy-providers:
     url: http://sub.store/download/Provider-4?target=Stash
 
 proxies:
-  - name: SSRDOG
-    type: select
-    proxies:
-      - '🇭🇰 Hong Kong丨01'
-      - '🇭🇰 Hong Kong丨04'
-      - '🇭🇰 Hong Kong丨07'
-      - '🇹🇼 Taiwan丨01'
-      - '🇹🇼 Taiwan丨04'
-      - '🇹🇼 Taiwan丨07'
-      - '🇸🇬 Singapore丨01'
-      - '🇸🇬 Singapore丨04'
-      - '🇸🇬 Singapore丨07'
-      - '🇺🇸 United States丨01'
-      - '🇺🇸 United States丨04'
-      - '🇺🇸 United States丨07'
-      - '🇯🇵 Japan丨01'
-      - '🇯🇵 Japan丨04'
-      - '🇯🇵 Japan丨07'
-      - '🇰🇷 South Korea丨01'
-      - '🇨🇦 Canada丨01'
-      - '🇬🇧 Great Britain丨01'
-      - '🇹🇷 Turkey丨01'
-      - '🇮🇳 India丨01'
-      - '🇳🇱 Netherlands丨01'
-      - '🇫🇷 France丨01'
-      - '🇩🇪 Germany丨01'
-      - '🇻🇳 Vietnam丨01'
-      - '🇲🇾 Malaysia丨01'
-      - '🇹🇭 Thailand丨01'
-      - '🇵🇭 Philippines丨01'
-      - 'Other Regions'
-      - ALL
-      - AUTO
-      - DIRECT
-  - name: DIRECT
+  - name: Direct Connection
     type: DIRECT
     udp: true
 
@@ -217,8 +183,9 @@ proxy-groups:
       - 'DIRECT'
 
   - name: BiliBili
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/bilibili_3.png
     type: select
-    proxies: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/bilibili_3.png
+    proxies:
       - 'Default'
       - 'AUTO'
       - 'ALL'
