@@ -42,18 +42,9 @@ dns:
       - 240.0.0.0/4
 
 proxy-providers:
-  Provider-1:
+  SSRDOG:
     interval: 600
     url: http://sub.store/download/Provider-1?target=Stash
-  Provider-2:
-    interval: 600
-    url: http://sub.store/download/Provider-2?target=Stash
-  Provider-3:
-    interval: 600
-    url: http://sub.store/download/Provider-3?target=Stash
-  Provider-4:
-    interval: 600
-    url: http://sub.store/download/Provider-4?target=Stash
 
 proxies:
   - name: Direct Connection
