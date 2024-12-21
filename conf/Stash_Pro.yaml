@@ -2,7 +2,7 @@ mixed-port: 7890
 allow-lan: true
 bind-address: '*'
 mode: rule
-log-level: info
+log-level: debug
 ipv6: false
 profile:
   store-selected: true
@@ -86,7 +86,7 @@ proxies:
       - '🇲🇾 Malaysia丨01'
       - '🇹🇭 Thailand丨01'
       - '🇵🇭 Philippines丨01'
-      - Other Regions
+      - 'Other Regions'
       - ALL
       - AUTO
       - DIRECT
@@ -99,175 +99,176 @@ proxy-groups:
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png
     type: select
     proxies:
-      - AUTO
-      - SSRDOG
-      - DIRECT
-      - ALL
+      - 'AUTO'
+      - 'SSRDOG'
+      - 'DIRECT'
+      - 'ALL'
 
   # 功能分组
   - name: OpenAI
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/ChatGPT.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Google
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Apple
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Apple.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Microsoft
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Microsoft.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
+
 
   - name: PayPal
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/PayPal.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: YouTube
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/YouTube.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: NETFLIX
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Netflix.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Spotify
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Disney+
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Disney+.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: TikTok
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: BiliBili
     type: select
     proxies: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/bilibili_3.png
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Steam
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Steam.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Telegram
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Mainland
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Domestic.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   - name: Others
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Final.png
     type: select
     proxies:
-      - Default
-      - AUTO
-      - ALL
-      - SSRDOG
-      - Other Regions
-      - DIRECT
+      - 'Default'
+      - 'AUTO'
+      - 'ALL'
+      - 'SSRDOG'
+      - 'Other Regions'
+      - 'DIRECT'
 
   # 基于地区分组
   - name: Hong Kong
@@ -320,7 +321,7 @@ proxy-groups:
     filter: "(?i)(新加坡|坡|狮城|🇸🇬|sg|singapore)"
 
   # 其他
-  - name: Other Regions
+  - name: 'Other Regions'
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/World_Map.png
     type: url-test
     include-all: true
@@ -340,24 +341,39 @@ proxy-groups:
     type: select
     include-all: true
 rules:
-  - RULE-SET,category-ai-chat-!cn,OpenAI
-  - RULE-SET,google,Google
-  - RULE-SET,apple,Apple
-  - RULE-SET,microsoft,Microsoft
-  - RULE-SET,payapl,PayPal
-  - RULE-SET,youtube,YouTube
-  - RULE-SET,netflix,NETFLIX
-  - RULE-SET,spotify,Spotify
-  - RULE-SET,disney,Disney+
-  - RULE-SET,tiktok,TikTok
-  - RULE-SET,bilibili,BiliBili
-  - RULE-SET,steam,Steam
-  - RULE-SET,telegram,Telegram
-  - RULE-SET,microsoft@cn,Mainland
-  - RULE-SET,steam@cn,Mainland
-  - GEOIP,LAN,DIRECT,no-resolve
-  - GEOIP,CN,Mainland,no-resolve
-  - MATCH,Others
+  - 'SCRIPT,quic,REJECT'
+  - 'RULE-SET,category-ai-chat-!cn,OpenAI'
+  - 'RULE-SET,google,Google'
+  - 'RULE-SET,apple,Apple'
+  - 'RULE-SET,microsoft,Microsoft'
+  - 'RULE-SET,payapl,PayPal'
+  - 'RULE-SET,youtube,YouTube'
+  - 'RULE-SET,netflix,NETFLIX'
+  - 'RULE-SET,spotify,Spotify'
+  - 'RULE-SET,disney,Disney+'
+  - 'RULE-SET,tiktok,TikTok'
+  - 'RULE-SET,bilibili,BiliBili'
+  - 'RULE-SET,steam,Steam'
+  - 'RULE-SET,telegram,Telegram'
+  - 'RULE-SET,microsoft@cn,Mainland'
+  - 'RULE-SET,steam@cn,Mainland'
+  - 'GEOIP,LAN,DIRECT,no-resolve'
+  - 'GEOIP,CN,Mainland,no-resolve'
+  - 'DOMAIN,local.adguard.org,DIRECT'
+  - 'DOMAIN-SUFFIX,local,DIRECT'
+  - 'IP-CIDR,127.0.0.0/8,DIRECT'
+  - 'IP-CIDR,172.16.0.0/12,DIRECT'
+  - 'IP-CIDR,192.168.0.0/16,DIRECT'
+  - 'IP-CIDR,10.0.0.0/8,DIRECT'
+  - 'IP-CIDR,17.0.0.0/8,DIRECT'
+  - 'IP-CIDR,100.64.0.0/10,DIRECT'
+  - 'IP-CIDR,224.0.0.0/4,DIRECT'
+  - 'IP-CIDR,203.0.113.0/24,DIRECT'
+  - 'IP-CIDR,192.0.2.0/24,DIRECT'
+  - 'IP-CIDR6,fe80::/10,DIRECT'
+  - 'GEOIP,CN,DIRECT' #no-resolve
+  - 'GEOIP,LAN,DIRECT' #no-resolve
+  - 'MATCH,Others'
 rule-providers:
   category-ai-chat-!cn:
     type: http
