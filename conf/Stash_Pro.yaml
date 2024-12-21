@@ -285,7 +285,7 @@ rules:
   - 'RULE-SET,google,Google'
   - 'RULE-SET,apple,Apple'
   - 'RULE-SET,microsoft,Microsoft'
-  - 'RULE-SET,payapl,PayPal'
+  - 'RULE-SET,paypal,PayPal'
   - 'RULE-SET,youtube,YouTube'
   - 'RULE-SET,netflix,NETFLIX'
   - 'RULE-SET,spotify,Spotify'
