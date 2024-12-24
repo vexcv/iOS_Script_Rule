@@ -1,0 +1,465 @@
+# Author: vexcv
+# Update: 2024.12.25
+# Telegram: https://t.me/vexcso
+
+subscribe-url: http://your-another-service-provider  # 订阅链接，用于从服务商获取节点信息
+
+mixed-port: 7890  # 混合代理端口，用于接收 HTTP、HTTPS 和 SOCKS5 的请求
+allow-lan: true  # 是否允许局域网设备通过本地代理访问
+bind-address: '*'  # 代理程序监听的地址，'*' 表示监听所有网络接口
+mode: rule  # 代理模式：rule（按规则分流）、global（全局代理）、direct（全局直连）
+log-level: warning  # 日志级别：warning（警告）、info（一般信息）、debug（调试）
+ipv6: false  # 是否启用 IPv6 支持
+
+profile:  # 程序运行时的配置存储选项
+  store-selected: true  # 是否保存用户上次选择的代理节点
+  tracing: false  # 是否启用追踪模式（用于调试）
+  store-fake-ip: false  # 是否保存虚拟 IP 映射，适用于 fake-ip 模式
+
+unified-delay: true  # 统一延迟优化，减少规则解析对性能的影响
+
+hosts:  # 静态主机映射
+  dnslog.cn: 47.244.138.18  # 将域名 dnslog.cn 静态解析为指定 IP 地址
+
+dns:  # 内置 DNS 配置
+  enable: true  # 是否启用内置 DNS 服务
+  ipv6: false  # 是否支持 IPv6 地址的 DNS 解析
+  listen: '0.0.0.0:1053'  # DNS 服务监听的地址和端口
+  enhanced-mode: fake-ip  # DNS 增强模式：fake-ip（使用虚拟 IP）、redir-host（返回真实 IP）Fake-IP 模式会为未解析的域名分配虚拟 IP，可能会与某些特定应用（如局域网共享、某些游戏服务）不兼容。如果遇到兼容性问题，可以切换为 redir-host 模式：
+  fake-ip-range: 198.18.0.1/16  # 虚拟 IP 地址范围，fake-ip 模式下使用
+  use-hosts: true  # 是否使用 hosts 映射表
+  default-nameserver: # 默认的上游 DNS 服务器
+    - 223.5.5.5 # 阿里
+    - 119.28.28.28 # 腾讯
+    - system # 系统
+  nameserver:  # DoH（DNS over HTTPS）服务器列表
+    - 'quic://1.1.1.1:853' # Cloudflare DoQ服务
+    # - 'quic://8.8.8.8:853' # Google DoQ服务
+    - 'https://doh.pub/dns-query'  # 腾讯公共 DNS 的 DoH 服务
+    - 'https://1.1.1.1/dns-query' # Cloudflare公共 DNS 的 DoH 服务
+  fake-ip-filter:  # fake-ip 模式下不使用虚拟 IP 的域名
+    - '*.lan'  # 匹配所有 .lan 后缀的域名
+    - localhost.ptlogin2.qq.com  # 腾讯本地登录服务
+    - dns.msftncsi.com  # Windows 网络连通性检测
+    - '*.srv.nintendo.net'  # Nintendo Switch 服务
+    - '*.stun.playstation.net'  # PlayStation 网络
+    - 'xbox.*.microsoft.com'  # Xbox 服务
+    - '*.xboxlive.com'  # Xbox Live 服务
+  fallback:  # 备用 DNS 服务器，用于主 DNS 解析失败时
+    - 1.1.1.1  # Cloudflare 公共 DNS
+    - 8.8.8.8  # Google 公共 DNS
+  fallback-filter:  # 备用 DNS 的过滤规则
+    geoip: true  # 启用 GEOIP 过滤（基于地理位置判断是否代理）
+    geoip-code: CN  # 过滤规则的国家码
+    ipcidr:  # 备用 DNS 需要过滤的 IP 范围
+      - 240.0.0.0/4  # 广播地址等特殊 IP 段
+
+proxy-providers:  # 节点提供商配置
+  SSRDOG:
+    interval: 14400  # 每隔 14400 秒（4 小时）更新一次节点信息
+    url: http://your-another-service-provider  # 提供商的订阅链接
+
+proxy-groups:  # 功能分流组和地区分流组配置
+  - name: Proxy  # 默认代理组，手动选择节点
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png
+    type: select
+    include-all: true
+  - name: Auto  # 自动选择延迟最低的节点
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    interval: 300  # 测试间隔 300 秒
+    lazy: true
+    tolerance: 50
+    include-all: true
+  - name: OpenAI  # OpenAI 流量分流组
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: Google
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: Apple
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Apple.png
+    type: select
+    proxies:
+      - 'DIRECT'
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: Microsoft
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Microsoft.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+      - 'DIRECT'
+  - name: PayPal
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/PayPal.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+      - 'DIRECT'
+  - name: YouTube
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/YouTube.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: NETFLIX
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Netflix.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: Spotify
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+      - 'DIRECT'
+  - name: Disney+
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Disney+.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: TikTok
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+      - 'DIRECT'
+  - name: BiliBili
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/bilibili_3.png
+    type: select
+    proxies:
+      - 'DIRECT'
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: Steam
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Steam.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+      - 'DIRECT'
+  - name: Telegram
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png
+    type: select
+    proxies:
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: Mainland
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Domestic.png
+    type: select
+    proxies:
+      - 'DIRECT'
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: Uncaptured
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Server.png
+    type: select
+    proxies:
+      - 'DIRECT'
+      - 'Proxy'
+      - 'Hong Kong'
+      - 'Taiwan'
+      - 'Japan'
+      - 'South Korea'
+      - 'Singapore'
+      - 'United States'
+      - 'Other Regions'
+  - name: Hong Kong
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png
+    interval: 14400
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    include-all: true
+    filter: "(?i)(澳门|🇲🇴|港|🇭🇰|hk|hong)"
+  - name: Taiwan
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Taiwan.png
+    interval: 14400
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    include-all: true
+    filter: "(?i)(台|🇹🇼|湾|tw|taiwan)"
+  - name: Japan
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Japan.png
+    interval: 14400
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    include-all: true
+    filter: "(?i)(日|🇯🇵|东京|大阪|jp|japan)"
+  - name: South Korea
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Korea.png
+    interval: 14400
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    include-all: true
+    filter: "(?i)(韩|🇰🇷|kr|korea)"
+  - name: Singapore
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Singapore.png
+    interval: 14400
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    include-all: true
+    filter: "(?i)(新加坡|坡|狮城|🇸🇬|sg|singapore)"
+  - name: United States
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png
+    interval: 14400
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    include-all: true
+    filter: "(?i)(美|🇺🇲|us|states|america)"
+  - name: Other Regions
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/World_Map.png
+    interval: 14400
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: "http://cp.cloudflare.com/generate_204"
+    include-all: true
+    filter: "(?i)^(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇰🇷|🇺🇸|🇸🇬|🇨🇳|港|hk|hong|台|tw|taiwan|日本|jp|japan|韩|kr|korea|美|us|states|新加坡|sg|singapore)).*"
+rule-providers:
+  category-ai-chat-!cn:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-chat-!cn.list
+  google:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.list
+  apple:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.list
+  microsoft:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.list
+  paypal:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/paypal.list
+  youtube:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.list
+  netflix:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.list
+  spotify:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.list
+  disney:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.list
+  tiktok:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.list
+  bilibili:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.list
+  steam:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.list
+  telegram:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.list
+  microsoft@cn:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft@cn.list
+  steam@cn:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam@cn.list
+  ASN:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/Coldvvater/Mononoke/Stash/Rules/ChinaASN.list
+rules:
+  # - ‘SCRIPT,quic,REJECT‘ # 删除或注释掉规则，允许 QUIC 协议通过, 或设置匹配策略组。
+  - 'DOMAIN,dog.ssrdog.com,Proxy'
+  - 'DOMAIN-KEYWORD,linkedin,Proxy'
+  - 'RULE-SET,category-ai-chat-!cn,OpenAI'
+  - 'RULE-SET,google,Google'
+  - 'RULE-SET,apple,Apple'
+  - 'RULE-SET,microsoft,Microsoft'
+  - 'RULE-SET,paypal,PayPal'
+  - 'RULE-SET,youtube,YouTube'
+  - 'RULE-SET,netflix,NETFLIX'
+  - 'RULE-SET,spotify,Spotify'
+  - 'RULE-SET,disney,Disney+'
+  - 'RULE-SET,tiktok,TikTok'
+  - 'RULE-SET,bilibili,BiliBili'
+  - 'RULE-SET,steam,Steam'
+  - 'RULE-SET,telegram,Telegram'
+  - 'RULE-SET,microsoft@cn,Mainland'
+  - 'RULE-SET,steam@cn,Mainland'
+  - 'DOMAIN,local.adguard.org,DIRECT'
+  - 'DOMAIN-SUFFIX,local,DIRECT'
+  - 'IP-CIDR,127.0.0.0/8,DIRECT'
+  - 'IP-CIDR,172.16.0.0/12,DIRECT'
+  - 'IP-CIDR,192.168.0.0/16,DIRECT'
+  - 'IP-CIDR,10.0.0.0/8,DIRECT'
+  - 'IP-CIDR,17.0.0.0/8,DIRECT'
+  - 'IP-CIDR,100.64.0.0/10,DIRECT'
+  - 'IP-CIDR,224.0.0.0/4,DIRECT'
+  - 'IP-CIDR,203.0.113.0/24,DIRECT'
+  - 'IP-CIDR,192.0.2.0/24,DIRECT'
+  - 'IP-CIDR6,fe80::/10,DIRECT'
+  # - 'GEOIP,CN,DIRECT'
+  # - 'GEOIP,LAN,DIRECT'
+  # ⚠注意：本配置目前主流使用ASN规则作为中国大陆分流，如不想使用，请在ASN规则前面加#号注释，同时把Mainland-rules、MainlandIP-rules及GEOIP前面的#号删除放行使其生效。
+  - 'RULE-SET,ASN,DIRECT'
+  - 'MATCH,Proxy'
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
+    #功能：
+      #定义一个快捷规则 quic，用来匹配所有使用 UDP 且目标端口为 443 的流量。
+      #该规则不会直接影响流量，只是用于标记或匹配 QUIC 流量。
+    #使用场景：
+      #分流：识别 QUIC 流量后，将其分配到不同的代理组或直接连接。
+      #阻止：在不使用 QUIC 时，配合 REJECT 规则禁止其通过。
