@@ -61,7 +61,7 @@ proxy-providers:  # 节点提供商配置
 
 proxy-groups:  # 功能分流组和地区分流组配置
   - name: Proxy  # 默认代理组，手动选择节点
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png
     type: select
     include-all: true
   - name: Auto  # 自动选择延迟最低的节点
@@ -82,7 +82,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: Google
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png
     type: select
     proxies:
       - 'Proxy'
@@ -94,7 +94,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: Apple
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Apple.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Apple.png
     type: select
     proxies:
       - 'DIRECT'
@@ -107,7 +107,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: Microsoft
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Microsoft.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Microsoft.png
     type: select
     proxies:
       - 'Proxy'
@@ -120,7 +120,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'Other Regions'
       - 'DIRECT'
   - name: PayPal
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/PayPal.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/PayPal.png
     type: select
     proxies:
       - 'Proxy'
@@ -133,7 +133,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'Other Regions'
       - 'DIRECT'
   - name: YouTube
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/YouTube.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/YouTube.png
     type: select
     proxies:
       - 'Proxy'
@@ -145,7 +145,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: NETFLIX
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Netflix.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Netflix.png
     type: select
     proxies:
       - 'Proxy'
@@ -157,7 +157,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: Spotify
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png
     type: select
     proxies:
       - 'Proxy'
@@ -170,7 +170,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'Other Regions'
       - 'DIRECT'
   - name: Disney+
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Disney+.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Disney+.png
     type: select
     proxies:
       - 'Proxy'
@@ -182,7 +182,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: TikTok
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok.png
     type: select
     proxies:
       - 'Proxy'
@@ -195,7 +195,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'Other Regions'
       - 'DIRECT'
   - name: BiliBili
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/bilibili_3.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/bilibili_3.png
     type: select
     proxies:
       - 'DIRECT'
@@ -208,7 +208,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: Steam
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Steam.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Steam.png
     type: select
     proxies:
       - 'Proxy'
@@ -221,7 +221,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'Other Regions'
       - 'DIRECT'
   - name: Telegram
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png
     type: select
     proxies:
       - 'Proxy'
@@ -233,7 +233,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: Mainland
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Domestic.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Domestic.png
     type: select
     proxies:
       - 'DIRECT'
@@ -246,7 +246,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: Uncaptured
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Server.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Server.png
     type: select
     proxies:
       - 'DIRECT'
@@ -259,7 +259,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
       - 'United States'
       - 'Other Regions'
   - name: Hong Kong
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png
     interval: 14400
     lazy: true
     tolerance: 50
@@ -268,7 +268,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
     include-all: true
     filter: "(?i)(澳门|🇲🇴|港|🇭🇰|hk|hong)"
   - name: Taiwan
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Taiwan.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Taiwan.png
     interval: 14400
     lazy: true
     tolerance: 50
@@ -277,7 +277,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
     include-all: true
     filter: "(?i)(台|🇹🇼|湾|tw|taiwan)"
   - name: Japan
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Japan.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Japan.png
     interval: 14400
     lazy: true
     tolerance: 50
@@ -286,7 +286,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
     include-all: true
     filter: "(?i)(日|🇯🇵|东京|大阪|jp|japan)"
   - name: South Korea
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Korea.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Korea.png
     interval: 14400
     lazy: true
     tolerance: 50
@@ -295,7 +295,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
     include-all: true
     filter: "(?i)(韩|🇰🇷|kr|korea)"
   - name: Singapore
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Singapore.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Singapore.png
     interval: 14400
     lazy: true
     tolerance: 50
@@ -304,7 +304,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
     include-all: true
     filter: "(?i)(新加坡|坡|狮城|🇸🇬|sg|singapore)"
   - name: United States
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png
     interval: 14400
     lazy: true
     tolerance: 50
@@ -313,7 +313,7 @@ proxy-groups:  # 功能分流组和地区分流组配置
     include-all: true
     filter: "(?i)(美|🇺🇲|us|states|america)"
   - name: Other Regions
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/World_Map.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/World_Map.png
     interval: 14400
     lazy: true
     tolerance: 50
@@ -327,97 +327,97 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-chat-!cn.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-chat-!cn.list
   google:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.list
   apple:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.list
   microsoft:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.list
   paypal:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/paypal.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/paypal.list
   youtube:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.list
   netflix:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.list
   spotify:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.list
   disney:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.list
   tiktok:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.list
   bilibili:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.list
   steam:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.list
   telegram:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.list
   microsoft@cn:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft@cn.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft@cn.list
   steam@cn:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam@cn.list
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam@cn.list
   ASN:
     type: http
     interval: 86400
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/Coldvvater/Mononoke/Stash/Rules/ChinaASN.list
+    url: https://testingcf.jsdelivr.net/gh/Coldvvater/Mononoke/Stash/Rules/ChinaASN.list
 rules:
   # - ‘SCRIPT,quic,REJECT‘ # 删除或注释掉规则，允许 QUIC 协议通过, 或设置匹配策略组。
   - 'DOMAIN,dog.ssrdog.com,Proxy'
