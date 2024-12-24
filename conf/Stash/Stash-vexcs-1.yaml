@@ -1,4 +1,3 @@
-subscribe-url: http://your-another-service-provider
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -25,9 +24,8 @@ dns:
     - system
   nameserver:
     - 'quic://1.1.1.1:853'
-    # - 'quic://8.8.8.8:853'
     - 'https://doh.pub/dns-query'
-    # - 'https://1.1.1.1/dns-query'
+    # 'https://1.1.1.1/dns-query'
   fake-ip-filter:
     - '*.lan'
     - localhost.ptlogin2.qq.com
@@ -414,7 +412,7 @@ rule-providers:
     format: text
     url: https://testingcf.jsdelivr.net/gh/Coldvvater/Mononoke/Stash/Rules/ChinaASN.list
 rules:
-  # - ‘SCRIPT,quic,REJECT‘
+  # ‘SCRIPT,quic,REJECT‘
   - 'DOMAIN,dog.ssrdog.com,Proxy'
   - 'DOMAIN-KEYWORD,linkedin,Proxy'
   - 'RULE-SET,category-ai-chat-!cn,OpenAI'
@@ -444,10 +442,10 @@ rules:
   - 'IP-CIDR,203.0.113.0/24,DIRECT'
   - 'IP-CIDR,192.0.2.0/24,DIRECT'
   - 'IP-CIDR6,fe80::/10,DIRECT'
-  # - 'GEOIP,CN,DIRECT'
-  # - 'GEOIP,LAN,DIRECT'
+  # 'GEOIP,CN,DIRECT'
+  # 'GEOIP,LAN,DIRECT'
   - 'RULE-SET,ASN,DIRECT'
-  - 'MATCH,Proxy'
+  - 'MATCH,Uncaptured'
 script:
   shortcuts:
     quic: network == 'udp' and dst_port == 443
