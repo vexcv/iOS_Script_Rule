@@ -25,7 +25,7 @@ dns:
   nameserver:
     - 'quic://1.1.1.1:853'
     - 'https://doh.pub/dns-query'
-    # 'https://1.1.1.1/dns-query'
+    - 'https://1.1.1.1/dns-query'
   fake-ip-filter:
     - '*.lan'
     - localhost.ptlogin2.qq.com
